@@ -84,6 +84,10 @@ header {
   .header-download-cv {
     display: none;
   }
+
+  .nav-actions .btn { 
+    height: 2.5rem;
+  }
 }
 
 @media only screen and (min-width: 60rem) and (max-width: 90rem) {
