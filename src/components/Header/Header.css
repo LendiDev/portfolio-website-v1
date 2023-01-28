@@ -32,9 +32,15 @@ header {
 }
 
 .nav-actions .regular-link:hover {
-  border-bottom: 3px solid #36E599;
+  border-bottom: 3px solid #36e599;
   padding-bottom: 5px;
   margin-top: 8px;
+}
+
+.header-download-cv {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .horizontal-line {
@@ -49,7 +55,7 @@ header {
   object-fit: contain;
 }
 
-.header-logo { 
+.header-logo {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -60,8 +66,19 @@ header {
   font-size: 3rem;
 }
 
-@media (max-width: 25rem) {
+@media (max-width: 48rem) {
   #header-inner-container {
     height: 4rem;
   }
+
+  .header-download-cv {
+    display: none;
+  }
 }
+
+@media only screen and (min-width: 60rem) and (max-width: 90rem) {
+  #header-inner-container {
+    padding: 0 var(--space-20);
+  }
+}
+

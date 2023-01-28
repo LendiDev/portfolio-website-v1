@@ -38,3 +38,9 @@ footer {
     gap: 0px;
   }
 }
+
+@media only screen and (min-width: 60rem) and (max-width: 90rem) {
+  .contact-me-container {
+    padding: var(--space-2) var(--space-20);
+  }
+}

@@ -1,8 +1,6 @@
-import { useEffect } from "react";
 import "./Main.css";
 
 const Main = () => {
-
   return (
     <main className="body-container">
       <div className="Main-body">
@@ -17,14 +15,21 @@ const Main = () => {
             a variety of clients. I specialize in using modern web technologies
             such as HTML, CSS, JavaScript and PHP to create responsive and
             user-friendly websites.
-            <p>
-              I am always looking for new challenges and opportunities to expand
-              my skills. Please take a look at my portfolio for examples of my
-              work and feel free to contact me for more information or to
-              discuss a project.
-            </p>
           </p>
+          <p>
+            I am always looking for new challenges and opportunities to expand
+            my skills. Please take a look at my portfolio for examples of my
+            work and feel free to contact me for more information or to discuss
+            a project.
+          </p>
+
+          <div className="download-cv">
+            <a className="btn" href="#top">
+              Download CV
+            </a>
+          </div>
         </section>
+
         <section>
           <h2>My Skills</h2>
           <div className="badge">

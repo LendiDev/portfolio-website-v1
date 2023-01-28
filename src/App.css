@@ -22,6 +22,11 @@ main {
   --space-4: 1.25rem;
   --space-5: 1.5rem;
   --space-6: 1.75rem;
+  --space-7: 2rem;
+  --space-8: 2.25rem;
+  --space-9: 2.5rem;
+  --space-10: 2.75rem;
+  --space-20: 6rem;
 
   color: white;
 }

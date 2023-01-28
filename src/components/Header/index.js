@@ -11,20 +11,19 @@ const Header = () => {
     <header>
       <div id="header-inner-container">
         <div className="header-logo">
-          <h1>Lendi<span className="text-accent">.</span>Dev</h1>
+          <h1>
+            Lendi<span className="text-accent">.</span>Dev
+          </h1>
         </div>
 
         <div className="nav-actions">
-          <a className="regular-link" href="#top" style={{ color: "white" }}>
-            Download CV
-          </a>
-          <div className="horizontal-line" />
+          <div className="header-download-cv">
+            <a className="regular-link" href="#top" style={{ color: "white" }}>
+              Download CV
+            </a>
+            <div className="horizontal-line" />
+          </div>
 
-          {/* <img
-            className="logo-image"
-            src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/smiling-face-with-sunglasses_1f60e.png"
-            alt="logo"
-          ></img> */}
           <Link
             className="btn"
             activeClass="active"
