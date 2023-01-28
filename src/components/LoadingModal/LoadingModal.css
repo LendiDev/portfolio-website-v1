@@ -40,6 +40,16 @@
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+/* Different Screens */
+
+@media (max-width: 48rem) {
+  .loading-logo {
+    padding-bottom: 6rem;
+  }
+}
+
+/* Animations */
+
 @keyframes bounce {
   0% {
     transform: translateY(0);
