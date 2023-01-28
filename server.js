@@ -15,7 +15,7 @@ var options = {
 };
 app.use(express.static("build", options));
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log(`React app listening at http://localhost:${port}`);
