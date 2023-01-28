@@ -3,6 +3,7 @@
 }
 
 html {
+  -webkit-tap-highlight-color: transparent;
   background-color: #221f33;
 }
 

@@ -2,12 +2,13 @@ import { useState } from "react";
 import "./RoundButton.css";
 
 const RoundButton = ({
-  size = "2.75rem",
+  size = "3rem",
   iconName = "fa-solid fa-xmark",
   iconColor = "#04041a",
   backgroundColor = "#fff",
   iconSize = "1.75rem",
   link = "#",
+  borderRadius = "100px",
 }) => {
   const [bgColor, setbgColor] = useState(backgroundColor);
 
@@ -15,6 +16,7 @@ const RoundButton = ({
     backgroundColor: bgColor,
     width: size,
     height: size,
+    borderRadius: borderRadius,
   };
 
   const iconStyle = {

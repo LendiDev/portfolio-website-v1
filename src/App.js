@@ -12,7 +12,6 @@ function App() {
     // callback function to call when event triggers
     const onPageLoad = () => {
       setIsLoaded(true);
-      //hideLoadingModal();
       // do something else
     };
 
@@ -26,13 +25,8 @@ function App() {
     }
   }, []);
 
-  const hideLoadingModal = () => {
-    //alert('remove loading');
-  }
-
   return (
     <div className="App">
-      {/* {!isLoaded && <LoadingModal />} */}
       <LoadingModal isLoaded={isLoaded} />
       <Header />
       <Main />

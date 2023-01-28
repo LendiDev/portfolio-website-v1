@@ -40,7 +40,7 @@ const Socials = (props) => {
         {buttons.map((button, index) => (
           <li key={"social-item" + index}>
             <RoundButton
-              size={button.size || "2.75rem"}
+              size={button.size || "3rem"}
               iconName={button.iconName}
               iconSize={button.iconSize}
               iconColor={button.iconColor}
