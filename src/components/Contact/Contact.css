@@ -1,0 +1,48 @@
+#contact-me {
+  width: 100%;
+  padding-bottom: var(--space-4);
+}
+
+#contact-me h2 {
+  margin: var(--space-3) 0;
+}
+
+#contact-me-inner {
+  margin: 0 auto;
+  max-width: 90rem;
+}
+
+#contact-me-inner label {
+  display: block;
+}
+
+#contact-me-inner input {
+  font: inherit;
+  width: 100%;
+  margin-top: var(--space-1);
+  border-radius: 100px;
+  padding: var(--space-2) var(--space-3);
+  font-size: 1.2rem;
+  border: 0px solid #282b5f;
+  background-color: #fafdff;
+}
+
+#contact-me-inner textarea {
+  font: inherit;
+  resize: vertical;
+  min-height: 10rem;
+  min-width: 100%;
+  margin-top: var(--space-1);
+  border-radius: 12px;
+  padding: var(--space-2) var(--space-3);
+  font-size: 1.2rem;
+  border: 0px solid #282b5f;
+  background-color: #fafdff;
+}
+
+@media (max-width: 48rem) {
+  #contact-me-inner input,
+  #contact-me-inner textarea {
+    width: 100%;
+  }
+}
