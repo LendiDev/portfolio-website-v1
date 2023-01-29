@@ -10,7 +10,8 @@ const LoadingModal = ({ isLoaded }) => {
       setTimeout(() => {
         setHideModalClassName("hide-modal");
       }, 500);
-      return setTimeout(() => {
+
+      setTimeout(() => {
         ref.current.remove();
       }, 1475);
     }
