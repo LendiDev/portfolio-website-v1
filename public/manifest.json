@@ -1,6 +1,6 @@
 {
   "short_name": "NL Portfolio",
-  "name": "Create Nikita's Lendiak Portfolio App",
+  "name": "Nikita's Lendiak Portfolio App",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#fff",
+  "background_color": "#221f33"
 }
