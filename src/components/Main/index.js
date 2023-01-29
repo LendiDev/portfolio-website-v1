@@ -112,27 +112,23 @@ const Main = () => {
         <section>
           <h2>Portfolio</h2>
           <ul className="portfolio-list">
-            <li className="portfolio-item">
-              <article className="item-wrapper">
-                <div className="image-wrapper">
-                  <img
-                    src="https://i.postimg.cc/59qD2zcB/image.png"
-                    alt="weather app"
-                  ></img>
-                </div>
-                <div className="portfolio-details">
+          <li className="portfolio-item">
+              <div className="image-wrapper">
+                <img
+                  src="https://i.postimg.cc/3RDDYGtm/image-1.png"
+                  alt="weather app"
+                ></img>
+              </div>
+
+              <div className="portfolio-details">
+                <div className="project-details">
                   <h3>Online Shop</h3>
                   <p className="app-info">
-                    This is basic online shop build on NodeJS using EJS Template
-                    Engine, MongoDB and Stripe Payment API
+                    This is basic online shop based on NodeJS
                   </p>
-                  <div className="badge">
-                    <i
-                      class="fa-brands fa-node-js"
-                      style={{ color: "#F7DF1E" }}
-                    ></i>{" "}
-                    NodeJS
-                  </div>
+                </div>
+
+                <div class="bottom-flex">
                   <div className="badge">
                     <i
                       class="fa-brands fa-square-js"
@@ -153,11 +149,19 @@ const Main = () => {
                   </div>
                   <div className="badge">
                     <i
+                      class="fa-brands fa-node-js"
+                      style={{ color: "#F7DF1E" }}
+                    ></i>{" "}
+                    NodeJS
+                  </div>
+                  <div className="badge">
+                    <i
                       class="fa-solid fa-database"
                       style={{ color: "#4DB33D" }}
                     ></i>{" "}
                     MongoDB
                   </div>
+
                   <div className="portfolio-actions">
                     <button className="btn btn-regular-font">Live Demo</button>
                     <button className="btn btn-round btn-with-icon btn-regular-font">
@@ -169,22 +173,27 @@ const Main = () => {
                     </button>
                   </div>
                 </div>
-              </article>
+              </div>
             </li>
             <li className="portfolio-item">
-              <article className="item-wrapper">
-                <div className="image-wrapper">
-                  <img
-                    src="https://ithemes.com/wp-content/uploads/2019/08/What-is-Your-Website-Design-Process-Blog-Post-Feature-Image-36119-01.png"
-                    alt="weather app"
-                  ></img>
-                </div>
-                <div className="portfolio-details">
+              <div className="image-wrapper">
+                <img
+                  src="https://i.postimg.cc/3RDDYGtm/image-1.png"
+                  alt="weather app"
+                ></img>
+              </div>
+
+              <div className="portfolio-details">
+                <div className="project-details">
                   <h3>Online Shop</h3>
                   <p className="app-info">
-                    This is basic online shop based on NodeJS, MongoDB
+                    This is basic online shop based on NodeJS, MongoDB This is
+                    basic online shop based on NodeJS, MongoDB This is basic
+                    online shop based on NodeJS, MongoDB
                   </p>
+                </div>
 
+                <div class="bottom-flex">
                   <div className="badge">
                     <i
                       class="fa-brands fa-square-js"
@@ -217,65 +226,7 @@ const Main = () => {
                     ></i>{" "}
                     MongoDB
                   </div>
-                  <div className="portfolio-actions">
-                    <button className="btn btn-regular-font">Live Demo</button>
-                    <button className="btn btn-round btn-with-icon btn-regular-font">
-                      <i
-                        class="fa-brands fa-github btn-icon"
-                        style={{ color: "black" }}
-                      ></i>
-                      GitHub
-                    </button>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li className="portfolio-item">
-              <article className="item-wrapper">
-                <div className="image-wrapper">
-                  <img
-                    src="https://i.postimg.cc/3RDDYGtm/image-1.png"
-                    alt="weather app"
-                  ></img>
-                </div>
-                <div className="portfolio-details">
-                  <h3>Online Shop</h3>
-                  <p className="app-info">
-                    This is basic online shop based on NodeJS, MongoDB
-                  </p>
 
-                  <div className="badge">
-                    <i
-                      class="fa-brands fa-square-js"
-                      style={{ color: "#F7DF1E" }}
-                    ></i>{" "}
-                    JavaScript
-                  </div>
-                  <div className="badge">
-                    <i
-                      class="fa-brands fa-html5"
-                      style={{ color: "#f06529" }}
-                    ></i>
-                    <i
-                      class="fa-brands fa-css3-alt"
-                      style={{ color: "#298EF1" }}
-                    ></i>{" "}
-                    HTML/CSS
-                  </div>
-                  <div className="badge">
-                    <i
-                      class="fa-brands fa-node-js"
-                      style={{ color: "#F7DF1E" }}
-                    ></i>{" "}
-                    NodeJS
-                  </div>
-                  <div className="badge">
-                    <i
-                      class="fa-solid fa-database"
-                      style={{ color: "#4DB33D" }}
-                    ></i>{" "}
-                    MongoDB
-                  </div>
                   <div className="portfolio-actions">
                     <button className="btn btn-regular-font">Live Demo</button>
                     <button className="btn btn-round btn-with-icon btn-regular-font">
@@ -287,7 +238,7 @@ const Main = () => {
                     </button>
                   </div>
                 </div>
-              </article>
+              </div>
             </li>
           </ul>
         </section>
