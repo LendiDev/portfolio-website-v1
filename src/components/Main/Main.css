@@ -12,7 +12,8 @@
 .Main-body {
   padding: 0.5rem var(--space-4);
   margin: 0 auto;
-  padding-top: var(--space-4);
+  margin-top: -6rem;
+  padding-top: calc(var(--space-4) + 6rem);
   max-width: 90rem;
 }
 

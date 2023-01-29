@@ -3,14 +3,45 @@ header {
   width: 100%;
   top: 0;
   position: sticky;
-  background-color: var(--color-bg);
+  background-color: transparent;
   text-align: center;
-
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+}
 
-  box-shadow: 0 1px 0px rgba(255, 255, 255, 0.2);
+.show-background {
+  animation-name: show-bg;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+}
+
+.hide-background {
+  animation-name: hide-bg;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-bg {
+  0% {
+    background-color: transparent;
+    box-shadow: 0 0px 0px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    background-color: var(--color-bg);
+    box-shadow: 0 1px 0px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes hide-bg {
+  0% {
+    background-color: var(--color-bg);
+    box-shadow: 0 1px 0px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: 0 0px 0px rgba(255, 255, 255, 0.2);
+  }
 }
 
 #header-inner-container {
@@ -75,7 +106,6 @@ header {
   font-size: 3rem;
 }
 
-
 @media (max-width: 48rem) {
   #header-inner-container {
     height: 4rem;
@@ -85,7 +115,7 @@ header {
     display: none;
   }
 
-  .nav-actions .btn { 
+  .nav-actions .btn {
     height: 2.5rem;
   }
 }
