@@ -27,7 +27,7 @@ const Main = () => {
             </article>
             <img
               className="profile-image"
-              src="/assets/images/profile.jpg"
+              src="/assets/images/profile.png"
               alt="Nikita's profile"
             ></img>
           </div>
