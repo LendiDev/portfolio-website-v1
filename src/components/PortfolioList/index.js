@@ -7,18 +7,7 @@ const portfolioListData = [
     imageAlt: "Online shop preview",
     header: "Online Shop",
     description: "This is basic online shop",
-    badges: [
-      {
-        iconClassName: "fa-brands fa-node-js",
-        iconColor: "#F7DF1E",
-        title: "NodeJS",
-      },
-      {
-        iconClassName: "fa-solid fa-database",
-        iconColor: "#4DB33D",
-        title: "MongoDB",
-      },
-    ],
+    badges: ["nodejs", "htmlCss", "javascript", "mongodb"],
     liveDemoButton: (
       <button href="" className="btn btn-regular-font">
         Live Demo
@@ -40,11 +29,7 @@ const PortfolioList = () => {
     });
   };
 
-  return (
-    <ul className="portfolio-list">
-      {createPortfolioList()}
-    </ul>
-  );
+  return <ul className="portfolio-list">{createPortfolioList()}</ul>;
 };
 
 export default PortfolioList;

@@ -1,3 +1,4 @@
+import badgesData from "../../../data/badges-data";
 import Badges from "../../Badges";
 import "./PortfolioItem.css";
 const PortfolioItem = ({
@@ -9,6 +10,8 @@ const PortfolioItem = ({
   liveDemoButton,
   gitHubButton,
 }) => {
+  const customBadges = badges.map((badgeName) => badgesData[badgeName]);
+
   return (
     <li className="portfolio-item">
       <div className="image-wrapper">
@@ -20,7 +23,7 @@ const PortfolioItem = ({
           <p className="app-info">{description}</p>
         </div>
         <div class="bottom-flex">
-          <Badges customBadges={badges} type="stack"/>
+          <Badges customBadges={customBadges} type="stack" />
           <div className="portfolio-actions">
             {liveDemoButton}
             {gitHubButton}
@@ -32,4 +35,3 @@ const PortfolioItem = ({
 };
 
 export default PortfolioItem;
-
