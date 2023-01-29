@@ -5,12 +5,12 @@ header {
   position: sticky;
   background-color: var(--color-bg);
   text-align: center;
-  border-bottom: 1px solid;
-  border-color: rgba(255, 255, 255, 0.3);
 
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+
+  box-shadow: 0 1px 0px rgba(255, 255, 255, 0.2);
 }
 
 #header-inner-container {
