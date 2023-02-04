@@ -5,8 +5,7 @@ footer {
 }
 
 .bottom-footer-container {
-  border-top: 1px solid;
-  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.35);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,8 +20,7 @@ footer {
 }
 
 .contact-me-outer-container {
-  border-top: 2px solid;
-  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.2);
   background-color: #070714;
 }
 

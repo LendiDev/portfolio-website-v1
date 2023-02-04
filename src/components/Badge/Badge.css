@@ -2,7 +2,7 @@
   background-color: #282b5f;
   display: inline-block;
   padding: var(--space-2) var(--space-4);
-  margin: 0 5px 7.5px 0;
+  margin: 7.5px 5px 0 0;
   border-radius: 100px;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -13,4 +13,14 @@
   justify-content: center;
   align-items: center;
   gap: 7.5px;
+}
+
+.badge-small {
+  margin: 7.5px 0 0 7.5px;
+  padding: var(--space-1) var(--space-2);
+  background-color: #34387b;
+}
+
+.badge-small p {
+  font-size: 1rem;
 }

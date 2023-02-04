@@ -23,7 +23,7 @@ const PortfolioItem = ({
           <p className="app-info">{description}</p>
         </div>
         <div class="bottom-flex">
-          <Badges customBadges={customBadges} type="stack" />
+          <Badges customBadges={customBadges} type="stack" isSmall/>
           <div className="portfolio-actions">
             {liveDemoButton}
             {gitHubButton}

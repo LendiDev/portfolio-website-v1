@@ -5,9 +5,10 @@ const Badge = ({
   iconClassName2,
   iconColor2 = "#fff",
   title,
+  isSmall,
 }) => {
   return (
-    <div className="badge">
+    <div className={`badge ${isSmall && 'badge-small'}`}>
       <p>
         {iconClassName && (
           <i className={iconClassName} style={{ color: iconColor }}></i>

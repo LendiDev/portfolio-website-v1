@@ -3,10 +3,10 @@ import Badge from "../Badge";
 
 import "./Badges.css";
 
-const Badges = ({ type = "skills", customBadges }) => {
+const Badges = ({ type = "skills", customBadges, isSmall }) => {
   const createBadges = (badgesList) => {
     return badgesList.map((badge) => {
-      return <Badge {...badge} />;
+      return <Badge {...badge} isSmall={isSmall}/>;
     });
   };
 
