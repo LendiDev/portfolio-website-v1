@@ -5,8 +5,8 @@ import "./Badges.css";
 
 const Badges = ({ type = "skills", customBadges, isSmall }) => {
   const createBadges = (badgesList) => {
-    return badgesList.map((badge) => {
-      return <Badge {...badge} isSmall={isSmall}/>;
+    return badgesList.map((badge, index) => {
+      return <Badge key={`${badge.title}${index}`} {...badge} isSmall={isSmall}/>;
     });
   };
 

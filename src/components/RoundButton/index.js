@@ -34,7 +34,7 @@ const RoundButton = ({
       onMouseEnter={() => setbgColor(backgroundColor + "90")}
       onMouseLeave={() => setbgColor(backgroundColor)}
     >
-      <i class={iconName} style={iconStyle}></i>
+      <i className={iconName} style={iconStyle}></i>
     </a>
   );
 };

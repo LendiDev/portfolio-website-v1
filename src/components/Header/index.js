@@ -39,6 +39,7 @@ const Header = () => {
       <div id="header-inner-container">
         <div className="header-logo">
           <Link
+            to="/"
             className="logo-link"
             target="_self"
             onClick={logoClickHandler}

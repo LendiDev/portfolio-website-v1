@@ -22,7 +22,7 @@ const PortfolioItem = ({
           <h3>{header}</h3>
           <p className="app-info">{description}</p>
         </div>
-        <div class="bottom-flex">
+        <div className="bottom-flex">
           <Badges customBadges={customBadges} type="stack" isSmall/>
           <div className="portfolio-actions">
             {liveDemoButton}

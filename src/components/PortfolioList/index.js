@@ -15,7 +15,7 @@ const portfolioListData = [
     ),
     gitHubButton: (
       <button className="btn btn-round btn-with-icon btn-regular-font">
-        <i class="fa-brands fa-github btn-icon" style={{ color: "black" }}></i>
+        <i className="fa-brands fa-github btn-icon" style={{ color: "black" }}></i>
         GitHub
       </button>
     ),
@@ -24,8 +24,8 @@ const portfolioListData = [
 
 const PortfolioList = () => {
   const createPortfolioList = () => {
-    return portfolioListData.map((portfolioItem) => {
-      return <PortfolioItem {...portfolioItem} />;
+    return portfolioListData.map((portfolioItem, index) => {
+      return <PortfolioItem key={`${portfolioItem.header}${index}`} {...portfolioItem} />;
     });
   };
 
