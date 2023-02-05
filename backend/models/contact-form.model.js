@@ -43,8 +43,8 @@ class ContactForm {
 
   sendEmails() {
     return Promise.all([
-      // this.#sendEmailToSender(),
-      // this.#sendEmailToReceiver(),
+      this.#sendEmailToSender(),
+      this.#sendEmailToReceiver(),
     ]);
   }
 }
