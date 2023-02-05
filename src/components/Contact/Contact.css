@@ -76,7 +76,7 @@
   border-color: #0d8f20;
 } */
 
-span.invalid {
+span.invalid, p.invalid {
   color: #ee3b47;
 }
 
@@ -102,9 +102,23 @@ span.invalid {
   color: #36E599;
 }
 
+.email-sent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.email-sent p {
+  margin: var(--space-9) 0 var(--space-1);
+}
+
 @media (max-width: 48rem) {
   #contact-me-inner input,
   #contact-me-inner textarea {
     width: 100%;
+  }
+
+  .email-sent p {
+    margin: 0 0 var(--space-1);
   }
 }

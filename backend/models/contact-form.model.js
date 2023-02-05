@@ -18,9 +18,9 @@ class ContactForm {
 
   #sendEmailToSender() {
     return transporter.sendMail({
-      from: "Nikita Lendiak <no-reply@lendi.dev>",
+      from: process.env.SENDER,
       to: `${this.name} <${this.email}>`,
-      replyTo: `Nikita Lendiak <lendiak93@gmail.com>`,
+      replyTo: process.env.REPLY_TO,
       priority: "high",
       subject: "Your next top performer is just an email away",
       html: this.htmlEmail,
@@ -30,8 +30,9 @@ class ContactForm {
 
   #sendEmailToReceiver() {
     return transporter.sendMail({
-      from: "Nikita Lendiak <no-reply@lendi.dev>",
-      to: `Nikita Lendiak <lendiak93@gmail.com>`,
+      from: `${this.name} <${this.email}>`,
+      sender: process.env.SENDER,
+      to: process.env.REPLY_TO,
       replyTo: `${this.name} <${this.email}>`,
       priority: "high",
       subject: "Your next top performer is just an email away",
@@ -42,8 +43,8 @@ class ContactForm {
 
   sendEmails() {
     return Promise.all([
-      this.#sendEmailToSender(),
-      this.#sendEmailToReceiver(),
+      // this.#sendEmailToSender(),
+      // this.#sendEmailToReceiver(),
     ]);
   }
 }
