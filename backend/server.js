@@ -1,5 +1,9 @@
+require('dotenv').config()
 const express = require("express");
-const path = require("path");
+const cors = require("cors");
+const formRouter = require("./routers/form.router");
+const { urlencoded, json } = require("express");
+
 const app = express();
 
 // #############################################################################
@@ -13,10 +17,20 @@ var options = {
   maxAge: "1m",
   redirect: false,
 };
+
 app.use(express.static("build", options));
+app.use(json());
+app.use(cors());
+app.use(urlencoded({ extended: true }));
+
+app.use("/form", formRouter);
+
+app.use((err, req, res, next) => {
+  res.status(500).send(err);
+})
 
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-  console.log(`React app listening at http://localhost:${port}`);
+  console.log(`Node server is running on http://localhost:${port}`);
 });

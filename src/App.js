@@ -12,7 +12,6 @@ function App() {
     // callback function to call when event triggers
     const onPageLoad = () => {
       setIsLoaded(true);
-      // do something else
     };
 
     // Check if the page has already loaded
