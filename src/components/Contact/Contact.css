@@ -13,6 +13,7 @@
 }
 
 #contact-me-inner label {
+  text-transform: capitalize;
   display: block;
 }
 
@@ -71,17 +72,15 @@
   background-color: #dddddd;
 }
 
-/* #contact-me-inner input.valid,
-#contact-me-inner textarea.valid {
-  border-color: #0d8f20;
-} */
-
-span.invalid, p.invalid {
+.initial-error-message {
   color: #ee3b47;
+  margin-bottom: var(--space-2);
+  margin-top: calc(-1 * var(--space-1));
 }
 
-.recaptcha {
-  display: none;
+span.invalid,
+p.invalid {
+  color: #ee3b47;
 }
 
 .google-copyright {
@@ -99,7 +98,7 @@ span.invalid, p.invalid {
 }
 
 .google-copyright a:hover {
-  color: #36E599;
+  color: #36e599;
 }
 
 .email-sent {
