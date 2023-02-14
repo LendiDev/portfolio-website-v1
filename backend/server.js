@@ -1,10 +1,15 @@
-require('dotenv').config()
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const formRouter = require("./routers/form.router");
 const { urlencoded, json } = require("express");
+const formRouter = require("./routers/form.router");
+const {
+  errorHandlerMiddleware,
+  notFoundErrorMiddleware,
+} = require("./middlewares/error-handler.middleware");
 
 const app = express();
+const port = process.env.PORT || 3001;
 
 // #############################################################################
 // This configures static hosting for files in /public that have the extensions
@@ -25,11 +30,8 @@ app.use(urlencoded({ extended: true }));
 
 app.use("/form", formRouter);
 
-app.use((err, req, res, next) => {
-  res.status(500).send(err);
-})
-
-const port = process.env.PORT || 3001;
+app.use(notFoundErrorMiddleware);
+app.use(errorHandlerMiddleware);
 
 app.listen(port, () => {
   console.log(`Node server is running on http://localhost:${port}`);
