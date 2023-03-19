@@ -12,7 +12,7 @@ const Main = () => {
               <h3>
                 Hello 👋
                 <br /> I'm Nikita Lendiak, <br />
-                <span className="text-accent">Full Stack Developer</span>.
+                <span className="text-accent">Junior Full Stack Developer</span>.
               </h3>
               <p>
                 Over 5 years of experience in creating and maintaining websites

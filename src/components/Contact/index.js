@@ -1,11 +1,10 @@
 import { useState, useRef } from "react";
 import "./Contact.css";
 import ReCAPTCHA from "react-google-recaptcha";
-import hostname from "../../constants/dev";
 import contactFormSchema from "../../utils/contact-form-validation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import axios from "axios";
+import { postContactMe } from "../../utils/api";
 
 const contactFormInputs = {
   name: {
@@ -40,15 +39,14 @@ const Contact = () => {
 
   const onSubmit = async (data) => {
     setInitialError(null);
-    setIsLoading(true);
     const recaptchaToken = await reCaptchaRef.current.executeAsync();
     const contactFormData = {
       ...data,
       recaptchaToken,
     };
 
-    axios
-      .post(hostname + "/form/send", contactFormData)
+    setIsLoading(true);
+    postContactMe(contactFormData)
       .then(() => {
         setIsEmailSent(true);
       })
@@ -114,13 +112,28 @@ const Contact = () => {
               className="btn btn-regular-font"
               disabled={isLoading}
             >
-              <i className="fa-solid fa-paper-plane"></i>{" "}
+              <i className="fa-solid fa-paper-plane"></i>
               {!isLoading ? "Send" : "Sending..."}
             </button>
+
+            <div className="google-copyright">
+              <p>
+                This site is protected by reCAPTCHA and the Google{" "}
+                <a href="https://policies.google.com/privacy" target={"blank"}>
+                  Privacy Policy
+                </a>{" "}
+                and{" "}
+                <a href="https://policies.google.com/terms" target={"blank"}>
+                  Terms of Service
+                </a>{" "}
+                apply.
+              </p>
+            </div>
           </form>
         ) : (
           <div className="email-sent">
             <p>Thank you! Your message has been sent.</p>
+            <p>I will get back to you shortly.</p>
           </div>
         )}
       </div>

@@ -19,10 +19,10 @@ exports.validateRecaptcha = (token) => {
       if (data.success === true) {
         return true;
       } else {
-        return Promise.reject(new CustomError(403, "Couldn't validate that you are human"));
+        return Promise.reject(new CustomError(403, "Couldn't validate human"));
       }
     })
     .catch(() => {
-      return Promise.reject(new CustomError(400, "Something went wrong"));
+      return Promise.reject(new CustomError(400, "Couldn't validate human"));
     });
 };

@@ -22,7 +22,7 @@
 
 .hide-modal {
   animation-name: hide-modal;
-  animation-duration: 1s;
+  animation-duration: 0.3s;
   animation-iteration-count: 1;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }

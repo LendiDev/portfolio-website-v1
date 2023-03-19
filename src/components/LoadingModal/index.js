@@ -9,11 +9,11 @@ const LoadingModal = ({ isLoaded }) => {
     if (isLoaded) {
       setTimeout(() => {
         setHideModalClassName("hide-modal");
-      }, 500);
+      }, 250);
 
       setTimeout(() => {
         ref.current.remove();
-      }, 1475);
+      }, 500);
     }
   }, [isLoaded]);
 

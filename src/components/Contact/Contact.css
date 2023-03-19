@@ -83,6 +83,10 @@ p.invalid {
   color: #ee3b47;
 }
 
+.g-recaptcha {
+  visibility: hidden;
+}
+
 .google-copyright {
   padding-top: var(--space-5);
 }
@@ -109,6 +113,10 @@ p.invalid {
 
 .email-sent p {
   margin: var(--space-9) 0 var(--space-1);
+}
+
+.email-sent p:nth-child(2) {
+  margin: var(--space-1) 0 var(--space-1);
 }
 
 @media (max-width: 48rem) {
