@@ -1,0 +1,9 @@
+.my-skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.my-skills-container {
+  background-color: transparent;
+}

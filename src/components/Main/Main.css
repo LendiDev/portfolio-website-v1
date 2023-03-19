@@ -31,6 +31,7 @@
 
 .about-me p {
   padding: var(--space-3) 0;
+  line-height: 1.6rem;
 }
 
 .about-me h3 {

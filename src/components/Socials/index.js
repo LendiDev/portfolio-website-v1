@@ -8,14 +8,14 @@ const Socials = () => {
       iconSize: "1.6rem",
       iconColor: "#0e76a8",
       backgroundColor: "#151836",
-      link: "https://linkedin.com",
+      link: "https://www.linkedin.com/in/lendiak/",
     },
     {
       iconName: "fa-brands fa-github",
       iconSize: "1.6rem",
       iconColor: "#DDD",
       backgroundColor: "#171515",
-      link: "https://github.com",
+      link: "https://github.com/LendiDev",
     },
   ];
 

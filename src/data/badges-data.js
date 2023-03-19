@@ -56,12 +56,31 @@ const badgesData = {
     iconColor: "#008bb9",
     title: "SQL",
   },
+  psql: {
+    iconClassName: "fa-solid fa-database",
+    iconColor: "#008bb9",
+    title: "PostgreSQL",
+  },
+  express: {
+    iconClassName: "fa-brands fa-square-js",
+    iconColor: "#F7DF1E",
+    title: "ExpressJS",
+  },
   tdd: {
     iconClassName: "fa-solid fa-flask",
     iconColor: "#16E118",
-    title: "TDD",
+    title: "Jest",
   },
-}
+  supertest: {
+    iconClassName: "fa-solid fa-flask",
+    iconColor: "#007EC6",
+    title: "Supertest",
+  },
+  github: {
+    iconClassName: "fa-brands fa-github",
+    iconColor: "white",
+    title: "GitHub",
+  },
+};
 
 export default badgesData;
-

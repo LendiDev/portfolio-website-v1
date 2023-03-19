@@ -1,19 +1,26 @@
 import badgesData from "../../../data/badges-data";
 import Badges from "../../Badges";
 import "./PortfolioItem.css";
-const PortfolioItem = ({
-  imageSrc,
-  imageAlt,
-  header,
-  description,
-  badges,
-  liveDemoButton,
-  gitHubButton,
-}) => {
+const PortfolioItem = (props) => {
+  const {
+    imageSrc,
+    imageAlt,
+    header,
+    description,
+    badges,
+    liveDemoButton,
+    gitHubButton,
+  } = props.portfolioItem;
+  const { setModalData } = props;
+
   const customBadges = badges.map((badgeName) => badgesData[badgeName]);
 
+  const handleItemClick = () => {
+    setModalData(props.portfolioItem);
+  };
+
   return (
-    <li className="portfolio-item">
+    <li className="portfolio-item" onClick={handleItemClick}>
       <div className="image-wrapper">
         <img src={imageSrc} alt={imageAlt}></img>
       </div>
@@ -23,7 +30,7 @@ const PortfolioItem = ({
           <p className="app-info">{description}</p>
         </div>
         <div className="bottom-flex">
-          <Badges customBadges={customBadges} type="stack" isSmall/>
+          <Badges customBadges={customBadges} type="stack" isSmall />
           <div className="portfolio-actions">
             {liveDemoButton}
             {gitHubButton}

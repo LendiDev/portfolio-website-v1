@@ -54,7 +54,7 @@ const Header = () => {
         <div className="nav-actions">
           <div className="header-download-cv">
             <a className="regular-link" href="#top" style={{ color: "white" }}>
-              Download CV
+              Resume
             </a>
             <div className="horizontal-line" />
           </div>
@@ -68,7 +68,7 @@ const Header = () => {
             offset={-1 * scrollToContactMeOffsetRem * useRemToPixels()}
             duration={600}
           >
-            Hire me
+            Contact me
           </Link>
         </div>
       </div>

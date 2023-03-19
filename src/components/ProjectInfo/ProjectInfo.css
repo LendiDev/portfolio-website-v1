@@ -1,0 +1,38 @@
+.project-info-modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.875);
+  backdrop-filter: blur(2px);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+}
+
+.project-info-modal-container p {
+  margin: 0;
+}
+
+.project-info-modal-container {
+  flex: 1;
+  max-width: 60rem;
+  height: 80vh;
+  margin: 0 var(--space-4);
+  padding: var(--space-2);
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+}
+
+.project-info-modal-close-button {
+  position: relative;
+}
+
+.project-info-modal-close-button button {
+  position: absolute;
+  margin-top: calc(-1 * var(--space-10));
+  right: calc(-1 * var(--space-2));
+}
