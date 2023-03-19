@@ -1,5 +1,4 @@
 const notFoundErrorMiddleware = (req, res, next) => {
-  console.log("redirecting");
   res.redirect("/");
 };
 

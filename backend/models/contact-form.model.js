@@ -4,17 +4,31 @@ const {
   htmlToSenderTemplate,
   plainTextTemplate,
 } = require("../utils/email-templates/to-sender.template");
-const transporter = require("../utils/email-transporter");
+const transporter = require("../configs/email-transporter");
+const validateForm = require("../utils/form-validator");
+const ResponseError = require("./response-error.model");
 
 class ContactForm {
-  constructor(name, email, message) {
-    this.name = name.trim();
+  constructor({ name, email, message }) {
+    this.name = name;
     this.email = email;
     this.message = validator.escape(message);
 
     this.htmlEmail = htmlToSenderTemplate(name, this.message);
     this.plainTextEmail = plainTextTemplate(name, this.message);
   }
+
+  validateForm = async () => {
+    if (
+      !validateForm({
+        name: this.name,
+        email: this.email,
+        message: this.message,
+      })
+    ) {
+      throw new ResponseError(400, "Invalid form inputs");
+    }
+  };
 
   #sendEmailToSender() {
     return transporter.sendMail({
@@ -42,10 +56,14 @@ class ContactForm {
   }
 
   sendEmails() {
-    return Promise.all([
-      this.#sendEmailToSender(),
-      this.#sendEmailToReceiver(),
-    ]);
+    return Promise.all([this.#sendEmailToSender(), this.#sendEmailToReceiver()])
+      .then(() => true)
+      .catch(() => {
+        throw new ResponseError(
+          500,
+          "Something went wrong while sending emails"
+        );
+      });
   }
 }
 

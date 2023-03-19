@@ -1,41 +1,28 @@
+const { default: axios } = require("axios");
 const ResponseError = require("./response-error.model");
 
-class ReCaptcha {
-  constructor(token) {
-    this.token = token;
-  }
-  validateHuman = async () => {
-    const secretKey = process.env.RECAPTCHA_SERVER_KEY;
+const { RECAPTCHA_SERVER_KEY } = process.env;
 
-    return fetch(`https://www.google.com/recaptcha/api/siteverify`, {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: `secret=${secretKey}&response=${this.token}`,
-    })
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new ResponseError(
-            503,
-            "something went wrong - cannot verify who you are"
-          );
-        }
-      })
-      .then((data) => {
-        if (data.success && data.success === true && data.hostname) {
-          return true;
-        } else if (!data.success && data["error-codes"]) {
-          throw new ResponseError(
-            503,
-            "something went wrong - cannot verify who you are"
-          );
-        }
-        throw new ResponseError(403, "you are robot");
-      }).catch((error) => {
-        throw new ResponseError(500, "Something went wrong... Please try again later");
-      });
-  };
+if (!RECAPTCHA_SERVER_KEY) {
+  throw new Error("process.env.RECAPTCHA_SERVER_KEY is not set!");
 }
 
-module.exports = ReCaptcha;
+exports.validateRecaptcha = (token) => {
+  return axios
+    .post(`https://www.google.com/recaptcha/api/siteverify`, null, {
+      params: {
+        secret: RECAPTCHA_SERVER_KEY,
+        response: token,
+      },
+    })
+    .then(({ data }) => {
+      if (data.success === true) {
+        return true;
+      } else {
+        return Promise.reject(new ResponseError(403, "Couldn't validate that you are human"));
+      }
+    })
+    .catch(() => {
+      return Promise.reject(new ResponseError(400, "Something went wrong"));
+    });
+};

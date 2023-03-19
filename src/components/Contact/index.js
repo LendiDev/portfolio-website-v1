@@ -5,13 +5,14 @@ import hostname from "../../constants/dev";
 import contactFormSchema from "../../utils/contact-form-validation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
 
 const contactFormInputs = {
   name: {
     type: "input",
     placeholder: "Enter your name",
   },
-  "e-mail": {
+  email: {
     type: "input",
     placeholder: "Enter your E-Mail address",
   },
@@ -23,7 +24,8 @@ const contactFormInputs = {
 
 const Contact = () => {
   const [isEmailSent, setIsEmailSent] = useState(false);
-  const [initialError, setInitialError] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+  const [initialError, setInitialError] = useState(null);
   const reCaptchaRef = useRef();
 
   const {
@@ -37,35 +39,25 @@ const Contact = () => {
   });
 
   const onSubmit = async (data) => {
-    setInitialError(undefined);
+    setInitialError(null);
+    setIsLoading(true);
     const recaptchaToken = await reCaptchaRef.current.executeAsync();
     const contactFormData = {
       ...data,
       recaptchaToken,
     };
 
-    fetch(hostname + "/form/send", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ...contactFormData,
-      }),
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((jsonResponse) => {
-        if (jsonResponse.error === false) {
-          setIsEmailSent(true);
-        } else {
-          setInitialError(jsonResponse.message);
-        }
+    axios
+      .post(hostname + "/form/send", contactFormData)
+      .then(() => {
+        setIsEmailSent(true);
       })
       .catch((error) => {
-        setInitialError('Something went wrong... Please try again later.');
+        setInitialError(error.message);
         reCaptchaRef.current.reset();
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
 
@@ -114,28 +106,17 @@ const Contact = () => {
             />
 
             {initialError && (
-              <p className="initial-error-message">
-                {initialError}
-              </p>
+              <p className="initial-error-message">{initialError}</p>
             )}
 
-            <button type="submit" className="btn btn-regular-font">
-              <i className="fa-solid fa-paper-plane"></i> Send
+            <button
+              type="submit"
+              className="btn btn-regular-font"
+              disabled={isLoading}
+            >
+              <i className="fa-solid fa-paper-plane"></i>{" "}
+              {!isLoading ? "Send" : "Sending..."}
             </button>
-
-            <div className="google-copyright">
-              <p>
-                This site is protected by reCAPTCHA and the Google{" "}
-                <a href="https://policies.google.com/privacy" target={"blank"}>
-                  Privacy Policy
-                </a>{" "}
-                and{" "}
-                <a href="https://policies.google.com/terms" target={"blank"}>
-                  Terms of Service
-                </a>{" "}
-                apply.
-              </p>
-            </div>
           </form>
         ) : (
           <div className="email-sent">
