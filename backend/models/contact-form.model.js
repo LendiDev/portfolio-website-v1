@@ -6,7 +6,7 @@ const {
 } = require("../utils/email-templates/to-sender.template");
 const transporter = require("../configs/email-transporter");
 const validateForm = require("../utils/form-validator");
-const ResponseError = require("./response-error.model");
+const CustomError = require("./custom-error.model");
 
 class ContactForm {
   constructor({ name, email, message }) {
@@ -26,7 +26,7 @@ class ContactForm {
         message: this.message,
       })
     ) {
-      throw new ResponseError(400, "Invalid form inputs");
+      throw new CustomError(400, "Invalid form inputs");
     }
   };
 
@@ -59,7 +59,7 @@ class ContactForm {
     return Promise.all([this.#sendEmailToSender(), this.#sendEmailToReceiver()])
       .then(() => true)
       .catch(() => {
-        throw new ResponseError(
+        throw new CustomError(
           500,
           "Something went wrong while sending emails"
         );

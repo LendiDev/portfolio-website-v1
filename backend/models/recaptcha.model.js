@@ -1,5 +1,5 @@
 const { default: axios } = require("axios");
-const ResponseError = require("./response-error.model");
+const CustomError = require("./custom-error.model");
 
 const { RECAPTCHA_SERVER_KEY } = process.env;
 
@@ -19,10 +19,10 @@ exports.validateRecaptcha = (token) => {
       if (data.success === true) {
         return true;
       } else {
-        return Promise.reject(new ResponseError(403, "Couldn't validate that you are human"));
+        return Promise.reject(new CustomError(403, "Couldn't validate that you are human"));
       }
     })
     .catch(() => {
-      return Promise.reject(new ResponseError(400, "Something went wrong"));
+      return Promise.reject(new CustomError(400, "Something went wrong"));
     });
 };
