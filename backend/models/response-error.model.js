@@ -4,10 +4,6 @@ class ResponseError extends Error {
     this.statusCode = statusCode;
     this.success = success;
   }
-
-  clientError = () => {
-    return { success: this.success, errorMessage: this.message };
-  };
 }
 
 module.exports = ResponseError;
