@@ -23,7 +23,8 @@
   align-items: center;
 }
 
-.about-me h3, .about-me p {
+.about-me h3,
+.about-me p {
   padding: 0;
   margin: 0;
 }
@@ -70,10 +71,20 @@ section:nth-child(1) {
   color: #36e599;
 }
 
+.about-me a {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid white;
+}
 
+.about-me a:hover {
+  color: #36e599;
+  border-color: #36e599;
+}
 
 @media (max-width: 48rem) {
-
   .about-me {
     flex-direction: column-reverse;
   }
@@ -100,7 +111,6 @@ section:nth-child(1) {
     height: 3rem;
     text-decoration: none;
   }
-
 }
 
 @media only screen and (min-width: 60rem) and (max-width: 90rem) {
@@ -109,4 +119,3 @@ section:nth-child(1) {
     padding-right: var(--space-20);
   }
 }
-
