@@ -4,6 +4,12 @@
   gap: var(--space-6);
 }
 
+.my-skills-container h3 {
+  margin:0 0 0.25rem 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
 .my-skills-container {
   background-color: transparent;
 }

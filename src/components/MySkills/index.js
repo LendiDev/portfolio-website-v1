@@ -5,8 +5,8 @@ import "./MySkills.css";
 const MySkills = () => {
   return (
     <div className="my-skills">
-    <div className="my-skills-container">
-        <h4>Languages</h4>
+      <div className="my-skills-container">
+        <h3>Languages</h3>
         <Badges
           type="skills"
           customBadges={["javascript"].map(
@@ -15,7 +15,7 @@ const MySkills = () => {
         />
       </div>
       <div className="my-skills-container">
-        <h4>Front-End</h4>
+        <h3>Front-End</h3>
         <Badges
           type="skills"
           customBadges={["htmlCss", "react", "reactNative"].map(
@@ -24,7 +24,7 @@ const MySkills = () => {
         />
       </div>
       <div className="my-skills-container">
-        <h4>Back-End</h4>
+        <h3>Back-End</h3>
         <Badges
           type="skills"
           customBadges={["nodejs", "express", "mongodb", "psql"].map(
@@ -33,7 +33,7 @@ const MySkills = () => {
         />
       </div>
       <div className="my-skills-container">
-        <h4>Other</h4>
+        <h3>Other</h3>
         <Badges
           type="skills"
           customBadges={["github", "tdd", "supertest"].map(
@@ -42,7 +42,7 @@ const MySkills = () => {
         />
       </div>
       <div className="my-skills-container">
-        <h4>Basic Knowledge</h4>
+        <h3>Basic Knowledge</h3>
         <Badges
           type="skills"
           customBadges={["python", "java", "android", "swift"].map(

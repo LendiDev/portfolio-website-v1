@@ -9,6 +9,7 @@ const RoundButton = ({
   iconSize = "1.75rem",
   link = "#",
   borderRadius = "100px",
+  socialNetwork,
 }) => {
   const [bgColor, setbgColor] = useState(backgroundColor);
 
@@ -31,6 +32,7 @@ const RoundButton = ({
       href={link}
       target="_blank"
       rel="noreferrer"
+      aria-label={`My ${socialNetwork}`}
       onMouseEnter={() => setbgColor(backgroundColor + "90")}
       onMouseLeave={() => setbgColor(backgroundColor)}
     >

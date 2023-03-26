@@ -36,6 +36,11 @@ h2, h3 {
   font-size: 1.6rem;
 }
 
+section h2 {
+  padding-top: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
 h4 {
   margin: 0;
   font-weight: 500;

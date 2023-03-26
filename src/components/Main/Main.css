@@ -23,7 +23,7 @@
   align-items: center;
 }
 
-.about-me h3,
+.about-me h2,
 .about-me p {
   padding: 0;
   margin: 0;
@@ -35,9 +35,12 @@
   max-width: 50rem;
 }
 
-.about-me h3 {
-  padding-bottom: var(--space-4);
+.about-me h2 {
   font-size: 3.5rem;
+}
+
+.about-me__content {
+  padding-top: var(--space-8);
 }
 
 section {

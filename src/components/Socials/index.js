@@ -4,6 +4,7 @@ import "./Socials.css";
 const Socials = () => {
   const buttons = [
     {
+      socialNetwork: 'LinkedIn',
       iconName: "fa-brands fa-linkedin",
       iconSize: "1.6rem",
       iconColor: "#0e76a8",
@@ -11,6 +12,7 @@ const Socials = () => {
       link: "https://www.linkedin.com/in/lendiak/",
     },
     {
+      socialNetwork: 'Github',
       iconName: "fa-brands fa-github",
       iconSize: "1.6rem",
       iconColor: "#DDD",

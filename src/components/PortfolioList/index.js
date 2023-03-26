@@ -8,7 +8,8 @@ const portfolioListData = [
     imageSrc: "/assets/projects/boardgames/0.png",
     imageAlt: "NC BoardGames front-end reviews preview",
     header: "NC BoardGames Front-End",
-    description: "Delivers an engaging and responsive user interface for a board game reviews. Developed in a week, it interacts seamlessly with the backend NC BoardGames Backend API, allowing users to browse, contribute to a reviews, comment, vote and more.",
+    description:
+      "Delivers an engaging and responsive user interface for a board game reviews. Developed in a week, it interacts seamlessly with the backend NC BoardGames Backend API, allowing users to browse, contribute to a reviews, comment, vote and more.",
     badges: ["javascript", "react", "htmlCss"],
     buttons: (
       <>
@@ -18,10 +19,7 @@ const portfolioListData = [
           target="_blank"
           rel="noreferrer"
         >
-        <i
-            className="fa-solid fa-eye"
-            style={{ color: "black" }}
-          ></i>
+          <i className="fa-solid fa-eye" style={{ color: "black" }}></i>
           Live Demo
         </a>
         <a
@@ -48,16 +46,25 @@ const portfolioListData = [
     badges: ["nodejs", "express", "psql", "tdd", "supertest"],
     buttons: (
       <>
+        {/* <a
+          href="https://lendidev.gitbook.io/nc-games/"
+          className="btn btn-regular-font"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i
+            className="fa-solid fa-book"
+            style={{ color: "black" }}
+          ></i>
+          Docs
+        </a> */}
         <a
           href="https://nc-games.lendi.dev/api"
           className="btn btn-regular-font"
           target="_blank"
           rel="noreferrer"
         >
-        <i
-            className="fa-solid fa-eye"
-            style={{ color: "black" }}
-          ></i>
+          <i className="fa-solid fa-eye" style={{ color: "black" }}></i>
           Live Demo
         </a>
         <a
@@ -84,31 +91,28 @@ const portfolioListData = [
     badges: ["javascript", "react", "htmlCss"],
     buttons: (
       <>
-      <a
-        href="https://meteorite-landings-react.netlify.app"
-        className="btn btn-regular-font"
-        target="_blank"
-        rel="noreferrer"
-      >
-      <i
-          className="fa-solid fa-eye"
-          style={{ color: "black" }}
-        ></i>
-        Live Demo
-      </a>
-      <a
-        href="https://github.com/LendiDev/meteorites-map-react-app"
-        className="btn btn-regular-font"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <i
-          className="fa-brands fa-github btn-icon"
-          style={{ color: "black" }}
-        ></i>
-        View Source
-      </a>
-    </>
+        <a
+          href="https://meteorite-landings-react.netlify.app"
+          className="btn btn-regular-font"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fa-solid fa-eye" style={{ color: "black" }}></i>
+          Live Demo
+        </a>
+        <a
+          href="https://github.com/LendiDev/meteorites-map-react-app"
+          className="btn btn-regular-font"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i
+            className="fa-brands fa-github btn-icon"
+            style={{ color: "black" }}
+          ></i>
+          View Source
+        </a>
+      </>
     ),
   },
 ];
