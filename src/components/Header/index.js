@@ -1,5 +1,6 @@
 import "./Header.css";
 import { Link } from "react-scroll";
+import { config } from "../../constants/config";
 import { useNavigate } from "react-router-dom";
 import useRemToPixels from "../../hooks/useRemToPixels";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
@@ -53,7 +54,13 @@ const Header = () => {
 
         <div className="nav-actions">
           <div className="header-download-cv">
-            <a className="regular-link" href="#top" style={{ color: "white" }}>
+            <a
+              className="regular-link"
+              href={config.resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: "white" }}
+            >
               Resume
             </a>
             <div className="horizontal-line" />

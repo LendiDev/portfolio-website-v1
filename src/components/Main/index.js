@@ -1,3 +1,4 @@
+import { config } from "../../constants/config";
 import MySkills from "../MySkills";
 import PortfolioList from "../PortfolioList";
 import "./Main.css";
@@ -43,7 +44,12 @@ const Main = () => {
           </div>
 
           <div className="download-cv">
-            <a className="btn" href="#top">
+            <a
+              className="btn"
+              href={config.resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
               Resume
             </a>
           </div>
