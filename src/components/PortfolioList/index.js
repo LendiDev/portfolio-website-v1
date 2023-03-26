@@ -75,6 +75,42 @@ const portfolioListData = [
       </>
     ),
   },
+  {
+    imageSrc: "/assets/projects/meteorites/0.png",
+    imageAlt: "Meteorite landings website preview",
+    header: "Meteorite Landings 🌍",
+    description:
+      "My impressive one-day sprint project that visualizes meteorite landings based on NASA's database. Leveraging React, the interactive map (MapBox) provides an engaging and intuitive way to explore meteorite impact locations across the globe.",
+    badges: ["javascript", "react", "htmlCss"],
+    buttons: (
+      <>
+      <a
+        href="https://meteorite-landings-react.netlify.app"
+        className="btn btn-regular-font"
+        target="_blank"
+        rel="noreferrer"
+      >
+      <i
+          className="fa-solid fa-eye"
+          style={{ color: "black" }}
+        ></i>
+        Live Demo
+      </a>
+      <a
+        href="https://github.com/LendiDev/meteorites-map-react-app"
+        className="btn btn-regular-font"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <i
+          className="fa-brands fa-github btn-icon"
+          style={{ color: "black" }}
+        ></i>
+        View Source
+      </a>
+    </>
+    ),
+  },
 ];
 
 const PortfolioList = () => {
