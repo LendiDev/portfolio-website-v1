@@ -1,5 +1,5 @@
 const validationPatterns = {
-  name: /^[a-z\s]{2,}$/i,
+  name: /^.{2,}$/i,
   email: /^\w+([+.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/i,
   message: /.{10,}/is,
 };

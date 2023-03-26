@@ -35,13 +35,16 @@
 }
 
 .portfolio-item:hover {
-  cursor: pointer;
   /* background-color: #1e2150; */
   -webkit-transform: scale(1.025);
   -moz-transform: scale(1.025);
   -ms-transform: scale(1.025);
   -o-transform: scale(1.025);
   transform: scale(1.025);
+}
+
+.portfolio-actions a {
+  text-decoration: none;
 }
 
 .image-wrapper {

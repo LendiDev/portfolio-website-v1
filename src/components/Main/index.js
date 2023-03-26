@@ -1,5 +1,3 @@
-import { Link } from "react-scroll";
-import Badges from "../Badges";
 import MySkills from "../MySkills";
 import PortfolioList from "../PortfolioList";
 import "./Main.css";

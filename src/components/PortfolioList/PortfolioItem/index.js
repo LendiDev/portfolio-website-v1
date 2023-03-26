@@ -8,19 +8,13 @@ const PortfolioItem = (props) => {
     header,
     description,
     badges,
-    liveDemoButton,
-    gitHubButton,
+    buttons,
   } = props.portfolioItem;
-  const { setModalData } = props;
 
   const customBadges = badges.map((badgeName) => badgesData[badgeName]);
 
-  const handleItemClick = () => {
-    setModalData(props.portfolioItem);
-  };
-
   return (
-    <li className="portfolio-item" onClick={handleItemClick}>
+    <li className="portfolio-item">
       <div className="image-wrapper">
         <img src={imageSrc} alt={imageAlt}></img>
       </div>
@@ -33,8 +27,7 @@ const PortfolioItem = (props) => {
         <div className="bottom-flex">
           <Badges customBadges={customBadges} type="stack" isSmall />
           <div className="portfolio-actions">
-            {liveDemoButton}
-            {/* {gitHubButton} */}
+            {buttons}
           </div>
         </div>
       </div>

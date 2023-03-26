@@ -12,7 +12,9 @@ const Footer = (props) => {
         </div>
       </div>
       <div className="bottom-footer-container">
-        <p>Lendi<span className="text-accent">.</span>Dev &copy; 2023</p>
+        <p>
+          Lendi<span className="text-accent">.</span>Dev &copy; 2023
+        </p>
       </div>
     </footer>
   );
