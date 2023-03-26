@@ -6,18 +6,13 @@ import "./PortfolioList.css";
 const portfolioListData = [
   {
     imageSrc: "/assets/projects/boardgames/0.png",
-    imageAlt: "Board games portfolio project preview",
-    header: "Board Games Reviews",
-    description:
-      "This is RESTful API for NC House of Games Front-End that designed to serve reviews, comments, users, categories related to board games. <br/><br/> The API is built using Node.js, Express, PostgreSQL, and is designed to be fast, scalable, and easy to use. <br/><br/> The users can access reviews on board games from other users and comments on those reviews. They can also post and delete comments for the reviews.",
-    badges: ["react", "javascript"],
+    imageAlt: "Board Games RESTful API",
+    header: "Board Games RESTful API",
+    description: "This is basic online shop",
+    badges: ["nodejs", "express", "psql"],
     liveDemoButton: (
       <button href="" className="btn btn-regular-font">
-        More details
-        <i
-          className="fa-solid fa-angle-right btn-icon"
-          style={{ color: "black" }}
-        ></i>
+        Live Demo
       </button>
     ),
     gitHubButton: (
@@ -32,13 +27,18 @@ const portfolioListData = [
   },
   {
     imageSrc: "/assets/projects/boardgames/0.png",
-    imageAlt: "Board Games RESTful API",
-    header: "Board Games RESTful API",
-    description: "This is basic online shop",
-    badges: ["nodejs", "express", "psql"],
+    imageAlt: "Board games portfolio project preview",
+    header: "NC BoardGames RESTful API",
+    description:
+      "API built for NC BoardGames Front-End that designed to serve reviews, comments, users, categories related to board games and more.",
+    badges: ["react", "javascript"],
     liveDemoButton: (
       <button href="" className="btn btn-regular-font">
-        Live Demo
+        More details
+        <i
+          className="fa-solid fa-angle-right btn-icon"
+          style={{ color: "black" }}
+        ></i>
       </button>
     ),
     gitHubButton: (

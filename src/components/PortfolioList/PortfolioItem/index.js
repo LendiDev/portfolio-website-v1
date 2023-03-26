@@ -25,16 +25,12 @@ const PortfolioItem = (props) => {
         <img src={imageSrc} alt={imageAlt}></img>
       </div>
       <div className="portfolio-details">
-        <div className="project-details">
-          <h3>{header}</h3>
-          <p
-            className="app-info"
-            dangerouslySetInnerHTML={{ __html: description }}
-          ></p>
-        </div>
+        <h3>{header}</h3>
+        <p
+          className="app-info"
+          dangerouslySetInnerHTML={{ __html: description }}
+        ></p>
         <div className="bottom-flex">
-          Tech Stack:
-          <br />
           <Badges customBadges={customBadges} type="stack" isSmall />
           <div className="portfolio-actions">
             {liveDemoButton}

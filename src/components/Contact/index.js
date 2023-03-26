@@ -39,7 +39,17 @@ const Contact = () => {
 
   const onSubmit = async (data) => {
     setInitialError(null);
-    const recaptchaToken = await reCaptchaRef.current.executeAsync();
+
+    let recaptchaToken;
+    try {
+      recaptchaToken = await reCaptchaRef.current.executeAsync();
+    } catch (error) {
+      setInitialError('Something went wrong with verifying ReCaptcha');
+    } finally {
+      setIsLoading(false);
+      reCaptchaRef.current.reset();
+    }
+    
     const contactFormData = {
       ...data,
       recaptchaToken,
@@ -51,7 +61,11 @@ const Contact = () => {
         setIsEmailSent(true);
       })
       .catch((error) => {
-        setInitialError(error.message);
+        if (error.message === 'Network Error') {
+          setInitialError('Something went wrong, please try again later');
+        } else {
+          setInitialError(error.message);
+        }
         reCaptchaRef.current.reset();
       })
       .finally(() => {
