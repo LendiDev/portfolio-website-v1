@@ -8,11 +8,16 @@ const portfolioListData = [
     imageSrc: "/assets/projects/boardgames/0.png",
     imageAlt: "Board games portfolio project preview",
     header: "Board Games Reviews",
-    description: "This is basic online shop",
+    description:
+      "This is RESTful API for NC House of Games Front-End that designed to serve reviews, comments, users, categories related to board games. <br/><br/> The API is built using Node.js, Express, PostgreSQL, and is designed to be fast, scalable, and easy to use. <br/><br/> The users can access reviews on board games from other users and comments on those reviews. They can also post and delete comments for the reviews.",
     badges: ["react", "javascript"],
     liveDemoButton: (
       <button href="" className="btn btn-regular-font">
         More details
+        <i
+          className="fa-solid fa-angle-right btn-icon"
+          style={{ color: "black" }}
+        ></i>
       </button>
     ),
     gitHubButton: (

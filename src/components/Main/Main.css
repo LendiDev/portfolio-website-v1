@@ -31,29 +31,17 @@
 
 .about-me p {
   padding: var(--space-3) 0;
-  line-height: 1.6rem;
+  line-height: 1.75rem;
+  max-width: 50rem;
 }
 
 .about-me h3 {
   padding-bottom: var(--space-4);
-}
-
-.profile-image {
-  margin-top: var(--space-1);
-  align-self: center;
-  object-fit: contain;
-  border-radius: 400px;
-  width: 17.5rem;
-  height: 17.5rem;
-  /* border: 4px solid rgba(255,255,255, 0.99); */
+  font-size: 3.5rem;
 }
 
 section {
   margin: 6rem 0;
-}
-
-section:nth-child(1) {
-  margin-top: 4rem;
 }
 
 .download-cv {
@@ -65,7 +53,9 @@ section:nth-child(1) {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  min-height: calc(50vh);
+  min-height: calc(100vh - 15rem);
+  margin: 0;
+  margin-bottom: 10rem;
 }
 
 .text-accent {

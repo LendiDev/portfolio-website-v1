@@ -39,11 +39,6 @@ const Main = () => {
                 technology.
               </p>
             </article>
-            <img
-              className="profile-image"
-              src="/assets/images/profile.png"
-              alt="Nikita's profile"
-            ></img>
           </div>
 
           <div className="download-cv">
@@ -57,7 +52,7 @@ const Main = () => {
           <MySkills />
         </section>
         <section>
-          <h2>My Projects</h2>
+          <h2>Featured Projects</h2>
           <PortfolioList />
         </section>
       </div>

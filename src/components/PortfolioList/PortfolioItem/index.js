@@ -27,13 +27,18 @@ const PortfolioItem = (props) => {
       <div className="portfolio-details">
         <div className="project-details">
           <h3>{header}</h3>
-          <p className="app-info">{description}</p>
+          <p
+            className="app-info"
+            dangerouslySetInnerHTML={{ __html: description }}
+          ></p>
         </div>
         <div className="bottom-flex">
+          Tech Stack:
+          <br />
           <Badges customBadges={customBadges} type="stack" isSmall />
           <div className="portfolio-actions">
             {liveDemoButton}
-            {gitHubButton}
+            {/* {gitHubButton} */}
           </div>
         </div>
       </div>

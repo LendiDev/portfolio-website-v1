@@ -5,11 +5,20 @@ import "./MySkills.css";
 const MySkills = () => {
   return (
     <div className="my-skills">
+    <div className="my-skills-container">
+        <h4>Languages</h4>
+        <Badges
+          type="skills"
+          customBadges={["javascript"].map(
+            (badgeName) => badgesData[badgeName]
+          )}
+        />
+      </div>
       <div className="my-skills-container">
         <h4>Front-End</h4>
         <Badges
           type="skills"
-          customBadges={["javascript", "htmlCss", "react", "reactNative"].map(
+          customBadges={["htmlCss", "react", "reactNative"].map(
             (badgeName) => badgesData[badgeName]
           )}
         />
