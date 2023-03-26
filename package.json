@@ -1,7 +1,9 @@
 {
-  "name": "app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "portfolio-website-v1",
+  "description": "This site showcases my web development projects, skills, and experiences, highlighting my passion for creating innovative and user-friendly applications",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": false,
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
