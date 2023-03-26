@@ -117,6 +117,7 @@
 @media (max-width: 48rem) {
   .portfolio-actions {
     justify-content: flex-start;
+    width: 100%;
   }
 
   .portfolio-details p.app-info {
