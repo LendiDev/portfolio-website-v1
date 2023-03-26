@@ -81,6 +81,21 @@ const badgesData = {
     iconColor: "white",
     title: "GitHub",
   },
+  nodemailer: {
+    iconClassName: "fa-solid fa-envelope",
+    iconColor: "#22B573",
+    title: "Nodemailer",
+  },
+  recaptcha: {
+    iconClassName: "fa-brands fa-google",
+    iconColor: "#F3B706",
+    title: "ReCaptcha",
+  },
+  mapbox: {
+    iconClassName: "fa-sharp fa-solid fa-earth-europe",
+    iconColor: "white",
+    title: "MapBox",
+  },
 };
 
 export default badgesData;
