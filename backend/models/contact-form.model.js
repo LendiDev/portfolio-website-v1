@@ -36,7 +36,7 @@ class ContactForm {
       to: `${this.name} <${this.email}>`,
       replyTo: process.env.REPLY_TO,
       priority: "high",
-      subject: "Your next top performer is just an email away",
+      subject: "You've Reached a Potential Star Performer 💼🚀🌟",
       html: this.htmlEmail,
       text: this.plainTextEmail,
     });
@@ -49,7 +49,7 @@ class ContactForm {
       to: process.env.REPLY_TO,
       replyTo: `${this.name} <${this.email}>`,
       priority: "high",
-      subject: "Your next top performer is just an email away",
+      subject: "You've Reached a Potential Star Performer 💼🚀🌟",
       html: this.htmlEmail,
       text: this.plainTextEmail,
     });

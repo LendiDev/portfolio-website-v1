@@ -1,5 +1,4 @@
-const htmlToSenderTemplate = (name, message) => {
-  return `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
   <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   
   <head>
@@ -441,11 +440,3 @@ const htmlToSenderTemplate = (name, message) => {
   </body>
   
   </html>
-  `;
-};
-
-const plainTextTemplate = (name, message) => {
-  return `Thank you for reaching out, ${name}! \n I appreciate your taking the time to write. I have received your message and will get back to you shortly. \n\n Your message: \n ${message}`;
-};
-
-module.exports = { htmlToSenderTemplate, plainTextTemplate };
