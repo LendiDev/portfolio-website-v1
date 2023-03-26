@@ -88,7 +88,7 @@ const portfolioListData = [
     header: "Meteorite Landings 🌍",
     description:
       "My impressive one-day sprint project that visualizes meteorite landings based on NASA's database. Leveraging React, the interactive map (MapBox) provides an engaging and intuitive way to explore meteorite impact locations across the globe.",
-    badges: ["javascript", "react", "htmlCss"],
+    badges: ["react", "htmlCss", "mapbox"],
     buttons: (
       <>
         <a
@@ -102,6 +102,30 @@ const portfolioListData = [
         </a>
         <a
           href="https://github.com/LendiDev/meteorites-map-react-app"
+          className="btn btn-regular-font"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i
+            className="fa-brands fa-github btn-icon"
+            style={{ color: "black" }}
+          ></i>
+          View Source
+        </a>
+      </>
+    ),
+  },
+  {
+    imageSrc: "/assets/projects/portfolio/0.png",
+    imageAlt: "My portfolio website preview",
+    header: "My Portfolio Website",
+    description:
+      "Is a sleek and simple personal portfolio that showcases my skills, web development projects and experiences. It features a responsive design for optimal viewing on various devices. The website highlights my passion for creating innovative and user-friendly applications.",
+    badges: ["react", "htmlCss", "nodejs", "nodemailer", "recaptcha"],
+    buttons: (
+      <>
+        <a
+          href="https://github.com/LendiDev/portfolio-website-v1"
           className="btn btn-regular-font"
           target="_blank"
           rel="noreferrer"
