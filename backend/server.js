@@ -28,6 +28,7 @@ app.use(json());
 app.use(cors());
 app.use(urlencoded({ extended: true }));
 
+app.use("/status", (_, res) => res.status(200).send('ok'));
 app.use("/form", formRouter);
 
 app.use(notFoundErrorMiddleware);
