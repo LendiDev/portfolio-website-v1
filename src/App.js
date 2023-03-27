@@ -4,6 +4,7 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import LoadingModal from "./components/LoadingModal";
+import { statusCheck } from "./utils/api";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -12,6 +13,8 @@ function App() {
     // callback function to call when event triggers
     const onPageLoad = () => {
       setIsLoaded(true);
+      // do a server status check to spin up a back-end server
+      statusCheck();
     };
 
     // Check if the page has already loaded
