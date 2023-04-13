@@ -96,6 +96,36 @@ const badgesData = {
     iconColor: "white",
     title: "MapBox",
   },
+  flutter: {
+    iconClassName: "fa-solid fa-mobile-screen-button",
+    iconColor: "#46D0FD",
+    title: "Flutter",
+  },
+  firebase: {
+    iconClassName: "fa-sharp fa-solid fa-fire",
+    iconColor: "#FFA610",
+    title: "Firebase",
+  },
+  ejs: {
+    iconClassName: "fa-solid fa-table-columns",
+    iconColor: "#90A93A",
+    title: "EJS templating",
+  },
+  s3: {
+    iconClassName: "fa-brands fa-aws",
+    iconColor: "#F3B706",
+    title: "S3",
+  },
+  dart: {
+    iconClassName: "fa-solid fa-d",
+    iconColor: "#2AB6F6",
+    title: "Dart",
+  },
+  googlemaps: {
+    iconClassName: "fa-sharp fa-solid fa-earth-europe",
+    iconColor: "lightblue",
+    title: "Google Maps",
+  },
 };
 
 export default badgesData;

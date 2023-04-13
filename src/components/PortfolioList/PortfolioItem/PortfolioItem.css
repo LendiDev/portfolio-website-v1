@@ -5,7 +5,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: var(--space-6);
-  margin-bottom: 6.5rem;
+  margin-bottom: 8rem;
 
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -26,12 +26,20 @@
   left: 0;
 }
 
-.portfolio-item:nth-child(even) .portfolio-details h3 {
+.portfolio-item:nth-child(even) .portfolio-details h3, .portfolio-item:nth-child(even) .portfolio-details time {
   text-align: left;
 }
 
 .portfolio-item:nth-child(even) .bottom-flex {
   text-align: left;
+  width: 87.5%;
+  align-self: self-start;
+}
+
+.portfolio-item:nth-child(odd) .bottom-flex {
+  text-align: right;
+  width: 87.5%;
+  align-self: self-end;
 }
 
 .portfolio-item:hover {
@@ -88,6 +96,11 @@
   text-align: right;
 }
 
+.portfolio-details time {
+  text-align: right;
+  padding-top: 0.3rem;
+}
+
 .portfolio-details p.app-info {
   width: 100%;
   font-size: 1rem;
@@ -96,7 +109,7 @@
   background-color: #1e2150;
   border-radius: 6px;
   padding: var(--space-4);
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -125,7 +138,6 @@
     border: 0;
     background-color: transparent;
     box-shadow: none;
-    
   }
 
   .portfolio-item {
@@ -147,6 +159,10 @@
     border-top-right-radius: 0;
   }
 
+  .portfolio-details h3 {
+    text-align: left;
+  }
+
   .image-wrapper {
     max-width: 100%;
     overflow: visible;
@@ -159,6 +175,8 @@
   }
 
   .bottom-flex {
-    text-align: start;
+    text-align: left !important;
+    align-self: self-start !important;
+    width: 100% !important;
   }
 }

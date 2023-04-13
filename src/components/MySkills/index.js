@@ -18,7 +18,7 @@ const MySkills = () => {
         <h3>Front-End</h3>
         <Badges
           type="skills"
-          customBadges={["htmlCss", "react", "reactNative"].map(
+          customBadges={["htmlCss", "react", "reactNative", "flutter"].map(
             (badgeName) => badgesData[badgeName]
           )}
         />
@@ -27,7 +27,7 @@ const MySkills = () => {
         <h3>Back-End</h3>
         <Badges
           type="skills"
-          customBadges={["nodejs", "express", "mongodb", "psql"].map(
+          customBadges={["nodejs", "express", "mongodb", "psql", "firebase"].map(
             (badgeName) => badgesData[badgeName]
           )}
         />
@@ -36,7 +36,7 @@ const MySkills = () => {
         <h3>Other</h3>
         <Badges
           type="skills"
-          customBadges={["github", "tdd", "supertest"].map(
+          customBadges={["github", "tdd", "supertest", "ejs", "s3"].map(
             (badgeName) => badgesData[badgeName]
           )}
         />
@@ -45,7 +45,7 @@ const MySkills = () => {
         <h3>Basic Knowledge</h3>
         <Badges
           type="skills"
-          customBadges={["python", "java", "android", "swift"].map(
+          customBadges={["python", "java", "android", "swift", "dart"].map(
             (badgeName) => badgesData[badgeName]
           )}
         />
