@@ -42,7 +42,7 @@ const Main = () => {
               </div>
             </article>
           </div>
-
+          {config.resumeUrl !== '#' &&
           <div className="download-cv">
             <a
               className="btn"
@@ -53,6 +53,7 @@ const Main = () => {
               Resume
             </a>
           </div>
+          }
         </section>
         <section>
           <h2>My Skills</h2>
