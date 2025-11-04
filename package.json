@@ -5,9 +5,6 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "@vitejs/plugin-react": "^5.1.0",
     "animate.css": "^4.1.1",
     "react-router-dom": "^6.7.0",
