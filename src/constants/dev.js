@@ -1,3 +1,4 @@
-const hostname = process.env.NODE_ENV === 'development' ? `http://localhost:3001` : '';
+// For static site - no backend API needed
+const hostname = '';
 
-module.exports = hostname;
+export default hostname;

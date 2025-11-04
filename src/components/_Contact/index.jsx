@@ -111,7 +111,7 @@ const Contact = () => {
 
             <ReCAPTCHA
               className="g-recaptcha"
-              sitekey={process.env.REACT_APP_RECAPTCHA_CLIENT_KEY}
+              sitekey={import.meta.env.VITE_RECAPTCHA_CLIENT_KEY || ''}
               size="invisible"
               theme="dark"
               ref={reCaptchaRef}
