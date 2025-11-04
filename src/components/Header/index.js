@@ -54,7 +54,7 @@ const Header = () => {
 
         <div className="nav-actions">
           <div className="header-download-cv">
-            <a
+            {/* <a
               className="regular-link"
               href={config.resumeUrl}
               target="_blank"
@@ -62,8 +62,8 @@ const Header = () => {
               style={{ color: "white" }}
             >
               Resume
-            </a>
-            <div className="horizontal-line" />
+            </a> */}
+            {/* <div className="horizontal-line" /> */}
           </div>
 
           <Link

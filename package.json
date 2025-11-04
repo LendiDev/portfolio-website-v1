@@ -33,7 +33,7 @@
   "scripts": {
     "start": "node --watch backend/server.js",
     "web": "react-scripts start",
-    "dev": "react-scripts build && node backend/server.js",
+    "dev": "react-scripts build",
     "build": "react-scripts build",
     "tests": "react-scripts test",
     "test": "jest",

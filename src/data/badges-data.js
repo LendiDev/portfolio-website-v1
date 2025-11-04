@@ -2,7 +2,7 @@ const badgesData = {
   javascript: {
     iconClassName: "fa-brands fa-square-js",
     iconColor: "#F7DF1E",
-    title: "Javascript",
+    title: "Javascript/Typescript",
   },
   htmlCss: {
     iconClassName: "fa-brands fa-html5",
@@ -15,6 +15,11 @@ const badgesData = {
     iconClassName: "fa-brands fa-react",
     iconColor: "#5ED4F3",
     title: "React",
+  },
+  solidjs: {
+    iconClassName: undefined,
+    iconColor: "#333333",
+    title: "SolidJS",
   },
   nodejs: {
     iconClassName: "fa-brands fa-node-js",
@@ -50,6 +55,11 @@ const badgesData = {
     iconClassName: "fa-solid fa-database",
     iconColor: "#4DB33D",
     title: "MongoDB",
+  },
+  golang: {
+    iconClassName: "fa-brands fa-golang",
+    iconColor: "#00A7D0",
+    title: "Go",
   },
   sql: {
     iconClassName: "fa-solid fa-database",

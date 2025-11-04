@@ -146,15 +146,6 @@ export const portfolioData = [
     buttons: (
       <>
         <a
-          href="https://online-shop-essentials.cyclic.app/"
-          className="btn btn-regular-font"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <i className="fa-solid fa-eye" style={{ color: "black" }}></i>
-          Live Demo
-        </a>
-        <a
           href="https://github.com/LendiDev/online-shop"
           className="btn btn-regular-font"
           target="_blank"
